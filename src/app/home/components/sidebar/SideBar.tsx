@@ -13,6 +13,7 @@ type Player = {
 };
 
 type AllPlayers = {
+  name: string;
   player_image: string;
   player_name: string;
   team_key: string;
@@ -27,6 +28,7 @@ const SideBar = ({
   setPlayerSelected: (player_name: string) => void;
 }) => {
   const [allPlayers, setAllPlayers] = useState<AllPlayers[]>([]);
+  const [selectedPlayers, setSelectedPlayers] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchPlayers = async () => {
@@ -42,8 +44,17 @@ const SideBar = ({
   }, []);
 
 
+  const addPlayerHandler = (playerName: string) => {
+    setPlayerSelected(playerName);
+    setSelectedPlayers((prevSelectedPlayers) => [
+      ...prevSelectedPlayers,
+      playerName,
+    ]);
+  };
 
-  //console.log("ALL", player);
+  const filteredPlayers = allPlayers.filter(
+    (player) => !selectedPlayers.includes(player.player_name)
+  );
 
   return (
     <div id="side-bar" className="w-[20%]">
@@ -51,22 +62,20 @@ const SideBar = ({
         id="side-bar-wrapper"
         className="w-full h-screen max-h-screen overflow-y-auto border-2 border-black bg-[#666d61]"
       >
-        {allPlayers ? (
-          allPlayers.map((player) => (
+        {filteredPlayers.length > 0 ? (
+          filteredPlayers.map((player) => (
             <div
               key={player.team_key}
               className="w-full h-[100px] flex items-center justify-center border-2 border-black cursor-pointer"
+              onClick={() => addPlayerHandler(player.player_name)}
             >
-              <div
-                className="flex justify-center items-center w-[100%]"
-                onClick={() => setPlayerSelected(player.player_name)}
-              >
+              <div className="flex justify-center items-center w-[100%]">
                 <Image
                   src={player.player_image ? player.player_image : noAvatar}
                   width={50}
                   height={50}
                   alt={""}
-                  className="rounded-full "
+                  className="rounded-full"
                 />
               </div>
               <div className="flex justify-start w-[100%]">

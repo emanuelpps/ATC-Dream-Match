@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PlayerTeamBox from "./components/playerTeamBox/PlayerTeamBox";
+import PlayerSelect from "./components/playerSelect/PlayerSelect";
 
 type PlayerWrapperProps = {
   playerSelected: string;
@@ -22,10 +23,11 @@ const TeamsWrapper = ({
   return (
     <div
       id="teams-wrapper"
-      className="w-[100%] flex items-center justify-center h-screen bg-center bg-cover bg-home-background"
+      className="w-[100%] flex flex-col items-center justify-center h-screen bg-center bg-cover bg-home-background"
     >
+      <PlayerSelect playerSelected={playerSelected} />
       <div className="flex items-center justify-center w-full h-screen max-h-screen border-black">
-      <PlayerTeamBox
+        <PlayerTeamBox
           title={localTeamTitle}
           team={localTeam}
           setTeams={setLocalTeam}

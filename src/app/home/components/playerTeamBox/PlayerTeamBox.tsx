@@ -27,7 +27,7 @@ const PlayerTeamBox = ({
   const [prevTitle, setPrevTitle] = useState<string>(title);
 
   useEffect(() => {
-    setPrevTitle(title);
+    //setPrevTitle(title);
     if (team.length >= 5) {
       setIsTeamLengthReady(true);
     } else {
@@ -46,8 +46,11 @@ const PlayerTeamBox = ({
       >
         <div
           id="player-team-box-title"
-          className="flex flex-col gap-10 mb-10 justify-center items-center"
+          className="flex flex-col items-center justify-center mb-10"
         >
+          <span className="text-sm font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
+            Nombre del equipo:
+          </span>
           <span className="text-5xl font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
             {title}
           </span>
@@ -55,8 +58,8 @@ const PlayerTeamBox = ({
             {isTeamLengthReady && !isTeamReady ? (
               <input
                 type="text"
-                defaultValue={title}
                 value={title}
+                placeholder="agregar nuevo equipo"
                 onChange={(e) => setTeamTitle(e.target.value)}
                 className="text-xl font-bold text-white rounded-md bg-[#b7c4ad] border-2 border-black w-[300px] h-[50px] max-h-[50px]"
               />
@@ -69,7 +72,7 @@ const PlayerTeamBox = ({
               label={`Agregar Jugador a equipo ${title}`}
               onClick={() => {
                 if (!isTeamLengthReady) {
-                  setTeams([...team, playerSelected]);
+                  setTeams([...team, playerSelected]), setPlayerSelected("");
                 }
               }}
               variant={"tertiary"}
@@ -96,7 +99,7 @@ const PlayerTeamBox = ({
             isTeamLengthReady
               ? "bg-transparent text-white font-semibold border-none"
               : "bg-[#b7c4ad] "
-          }  border-2 border-black w-[300px] h-[300px] max-h-[300px]`}
+          }  border-2 border-black w-[300px] h-[300px] max-h-[300px] rounded-lg`}
         >
           {team.map((player) => (
             <div
