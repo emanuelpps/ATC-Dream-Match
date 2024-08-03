@@ -1,3 +1,5 @@
+import { text } from "stream/consumers";
+
 interface Props {
     label: string;
     onClick: () => void;
@@ -25,6 +27,9 @@ const buttonStyles = {
         padding: "10px 20px",
         borderRadius: "5px",
         cursor: "pointer",
+        border: "2px solid black",
+        fontSize: "20px",
+        fontWeight: 600,
     },
 };
 
