@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ATC Dream Match
 
-## Getting Started
+## Intro
 
-First, run the development server:
+¿Alguna vez soñaste con ver un partido de fútbol en donde se enfrenten tus jugadores favoritos? Imaginate poder armar dos equipos de 5 jugadores cada uno, en donde no tengas ninguna limitación... posición, presupuesto, contrato, club, edad... tu mente es tu límite.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## React.js Challenge
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+En **Alquila tu Cancha** deseamos crear una web app `[responsive desktop y mobile]` que se pueda crear **"El partido de tus sueños"**, un partido de fútbol 5 en donde se enfrenten tus 10 jugadores favoritos. ¿Cuáles son las funcionalidades esperadas? Allí vamos...
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Darle la bienvenida al usuario
+- Poder listar los equipos creados
+- Crear dos equipos
+- Darle un nombre a cada equipo y poder editarlo si es necesario
+- Poder eliminar un equipo creado
+- Impedir la creación de más de dos equipos
+- Ver el detalle de un equipo (listado de jugadores vinculado)
+- Poder vincular jugadores a un equipo
+- Poder comunicar gráficamente cuando ambos equipos están "formados y completos"
 
-## Learn More
+### Precondiciones
 
-To learn more about Next.js, take a look at the following resources:
+- Se entiende como equipo formado a un equipo creado y nombrado.
+- Se entiende como equipo completo al equipo que tiene 5 jugadores.
+- El listado de jugadores disponible debe cargarse de la API https://apifootball.com/documentation/
+- No puede crearse más de 2 equipos.
+- No puede haber más de 5 jugadores en cada equipo.
+- No puede repetirse un mismo jugador en el equipo ni en el equipo adversario.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Next.js con typescript (Obligatorio)
+- Docker (Preferentemente)
+- Tailwind CSS (Obligatorio)
+- Git (Obligatorio)
+- y todas las otras cosas que creas conveniente!
 
-## Deploy on Vercel
+## Criterios de corrección
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+¡Ahora sí manos a la obra! esperamos que realices la entrega en una semana desde el momento del envío de la consigna. Para realizar la entrega deseamos que nos envíes un link del repo del proyecto.
+Valoraremos que todas las funcionalidades estén implementadas, que te tomes el tiempo para testear lo realizado antes de enviarnos el resultado, que seas prolij@ al escribir el código fuente, que escribas un Readme.md donde se indique cómo levantar el proyecto y todas las otras especificaciones que creas conveniente. Pero pero pero... por sobre todas las cosas, valoraremos que aportes tu creatividad ;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Muchos éxitos!
