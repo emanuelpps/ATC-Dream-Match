@@ -24,8 +24,10 @@ const PlayerTeamBox = ({
   setIsTeamReady,
 }: PlayerTeamBoxProps) => {
   const [isTeamLengthReady, setIsTeamLengthReady] = useState<boolean>(false);
+  const [prevTitle, setPrevTitle] = useState<string>(title);
 
   useEffect(() => {
+    setPrevTitle(title);
     if (team.length >= 5) {
       setIsTeamLengthReady(true);
     } else {
@@ -53,6 +55,7 @@ const PlayerTeamBox = ({
             {isTeamLengthReady && !isTeamReady ? (
               <input
                 type="text"
+                defaultValue={title}
                 value={title}
                 onChange={(e) => setTeamTitle(e.target.value)}
                 className="text-xl font-bold text-white rounded-md bg-[#b7c4ad] border-2 border-black w-[300px] h-[50px] max-h-[50px]"
@@ -80,7 +83,9 @@ const PlayerTeamBox = ({
           ) : isTeamLengthReady && isTeamReady ? (
             <Buttons
               label="Eliminar equipo"
-              onClick={() => {setTeams([]), setTeamTitle(title )}}
+              onClick={() => {
+                setTeams([]), setTeamTitle(prevTitle);
+              }}
               variant={"tertiary"}
             />
           ) : null}
