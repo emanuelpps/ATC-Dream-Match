@@ -61,7 +61,7 @@ const PlayerTeamBox = ({
               ? "Felicidades tu equipo esta listo!"
               : "Nombre del equipo:"}
           </span>
-          <span className="md:text-5xl font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
+          <span className="text-5xl font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
             {title}
           </span>
           <div>
@@ -110,7 +110,7 @@ const PlayerTeamBox = ({
             isTeamLengthReady
               ? "bg-transparent text-white font-semibold border-none"
               : "bg-[#b7c4ad] "
-          }  border-2 border-black w-[300px] max-h-[200px] h-[200px] md:w-[300px] md:h-[300px] md:max-h-[300px] rounded-lg overflow-y-auto`}
+          }  border-2 border-black w-[300px] h-[300px] max-h-[300px] rounded-lg overflow-y-auto`}
         >
           <div className="flex justify-start w-full">
             <span
