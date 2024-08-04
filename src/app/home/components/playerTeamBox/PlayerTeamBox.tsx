@@ -57,8 +57,10 @@ const PlayerTeamBox = ({
           id="player-team-box-title"
           className="flex flex-col items-center justify-center mb-10"
         >
-          <span className="text-sm font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
-            Nombre del equipo:
+          <span className="text-md font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
+            {isTeamReady
+              ? "Felicidades tu equipo esta listo!"
+              : "Nombre del equipo:"}
           </span>
           <span className="text-5xl font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
             {title}
@@ -108,6 +110,15 @@ const PlayerTeamBox = ({
               : "bg-[#b7c4ad] "
           }  border-2 border-black w-[300px] h-[300px] max-h-[300px] rounded-lg`}
         >
+          <div className="flex justify-start w-full ">
+            <span
+              className={`${
+                isTeamLengthReady ? "text-white" : "text-black"
+              } text-2xl font-bold  [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]`}
+            >
+              Jugadores:
+            </span>
+          </div>
           {team.map((player) => (
             <div
               key={player}

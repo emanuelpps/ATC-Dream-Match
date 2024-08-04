@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
   return (
     <div id="home-page">
-      <div id="home-page-wrapper" className="flex">
+      <div id="home-page-wrapper" className="flex max-h-screen">
         <SideBar
           playerSelected={playerSelected}
           setPlayerSelected={setPlayerSelected}
