@@ -82,8 +82,11 @@ const PlayerTeamBox = ({
             <Buttons
               label={`Agregar Jugador a equipo ${title}`}
               onClick={() => {
-                if (!isTeamLengthReady) {
-                  setTeams([...team, playerSelected]), setPlayerSelected("");
+                if (playerSelected) {
+                  if (!isTeamLengthReady) {
+                    setTeams([...team, playerSelected]);
+                    setPlayerSelected("");
+                  }
                 }
               }}
               variant={"tertiary"}
