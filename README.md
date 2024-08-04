@@ -8,43 +8,28 @@ ATC Dream Match es una aplicación web diseñada para gestionar y organizar part
 El proyecto está organizado de la siguiente manera:
 
 - **`public/`**: Contiene activos estáticos como imágenes y otros archivos accesibles públicamente.
-  - `next.svg`
-  - `vercel.svg`
   - **`assets/`**
 - **`src/`**: El directorio principal del código fuente.
   - **`app/`**
-    - `favicon.ico`
-    - `globals.css`
-    - `layout.tsx`
-    - `page.tsx`
+
     - **`Intro/`**
-      - `Intro.tsx`
+
     - **`home/`**
-      - `TeamsWrapper.tsx`
-      - `page.tsx`
+
       - **`components/playerSelect/`**
-        - `PlayerSelect.tsx`
+
       - **`components/playerTeamBox/`**
-        - `PlayerTeamBox.tsx`
+
       - **`components/sidebar/`**
-        - `SideBar.tsx`
+
   - **`components/`**
     - **`Buttons/`**
-      - `Buttons.tsx`
+
     - **`MobileWidget/`**
-      - `MobileWidget.tsx`
+
   - **`services/`**
-    - `GetPlayers.js`
-- **Archivos de configuración y metadatos**:
-  - `.env`
-  - `.eslintrc.json`
-  - `.gitignore`
-  - `next.config.mjs`
-  - `package-lock.json`
-  - `package.json`
-  - `postcss.config.mjs`
-  - `tailwind.config.ts`
-  - `tsconfig.json`
+
+
 
 ## Componentes y Funciones Clave
 ### Componentes
