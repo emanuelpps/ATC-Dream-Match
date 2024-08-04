@@ -79,7 +79,7 @@ const PlayerTeamBox = ({
         <div>
           {!isTeamLengthReady ? (
             <Buttons
-              label={`Agregar Jugador a equipo ${title}`}
+              label={`Agregar Jugador a este equipo`}
               onClick={() => {
                 if (playerSelected) {
                   if (!isTeamLengthReady) {
