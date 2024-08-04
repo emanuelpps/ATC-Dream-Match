@@ -12,6 +12,9 @@ import TeamsWrapper from "./TeamsWrapper";
 
 const Home: React.FC = () => {
   const [playerSelected, setPlayerSelected] = useState<string>("");
+  const [removePlayersFromTeam, setRemovePlayersFromTeam] = useState<string[]>(
+    []
+  );
 
   return (
     <div id="home-page">
@@ -19,10 +22,12 @@ const Home: React.FC = () => {
         <SideBar
           playerSelected={playerSelected}
           setPlayerSelected={setPlayerSelected}
+          removePlayersFromTeam={removePlayersFromTeam}
         />
         <TeamsWrapper
           setPlayerSelected={setPlayerSelected}
           playerSelected={playerSelected}
+          setRemovePlayersFromTeam={setRemovePlayersFromTeam}
         />
       </div>
     </div>

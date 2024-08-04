@@ -5,11 +5,13 @@ import PlayerSelect from "./components/playerSelect/PlayerSelect";
 type PlayerWrapperProps = {
   playerSelected: string;
   setPlayerSelected: (player_name: string) => void;
+  setRemovePlayersFromTeam: (players: string[]) => void;
 };
 
 const TeamsWrapper = ({
   playerSelected,
   setPlayerSelected,
+  setRemovePlayersFromTeam,
 }: PlayerWrapperProps) => {
   const [localTeam, setLocalTeam] = useState<string[]>([]);
   const [visitorTeam, setVisitorTeam] = useState<string[]>([]);
@@ -38,6 +40,7 @@ const TeamsWrapper = ({
             setIsTeamReady({ ...isTeamReady, localTeam: ready })
           }
           isTeamReady={isTeamReady.localTeam}
+          setRemovePlayersFromTeam={setRemovePlayersFromTeam}
         />
         <PlayerTeamBox
           title={visitorTeamTitle}
@@ -50,6 +53,7 @@ const TeamsWrapper = ({
             setIsTeamReady({ ...isTeamReady, visitorTeam: ready })
           }
           isTeamReady={isTeamReady.visitorTeam}
+          setRemovePlayersFromTeam={setRemovePlayersFromTeam}
         />
       </div>
     </div>

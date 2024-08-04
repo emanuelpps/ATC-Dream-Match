@@ -5,13 +5,6 @@ import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import noAvatar from "../../../../../public/assets/images/noAvatar.png";
 
-type Player = {
-  player_key: string;
-  player_name: string;
-  player_image: string;
-  player_age: string;
-};
-
 type AllPlayers = {
   name: string;
   player_image: string;
@@ -20,13 +13,20 @@ type AllPlayers = {
   team_name: string;
 };
 
+type PlayersToRemove = {
+  removePlayersFromTeam: string[];
+};
+
+type PlayerSelected = {
+  playerSelected: string;
+  setPlayerSelected: (player_name: string) => void;
+};
+
 const SideBar = ({
   playerSelected,
   setPlayerSelected,
-}: {
-  playerSelected: string;
-  setPlayerSelected: (player_name: string) => void;
-}) => {
+  removePlayersFromTeam,
+}: PlayerSelected & PlayersToRemove) => {
   const [allPlayers, setAllPlayers] = useState<AllPlayers[]>([]);
   const [selectedPlayers, setSelectedPlayers] = useState<string[]>([]);
 
@@ -43,7 +43,6 @@ const SideBar = ({
     fetchPlayers();
   }, []);
 
-
   const addPlayerHandler = (playerName: string) => {
     setPlayerSelected(playerName);
     setSelectedPlayers((prevSelectedPlayers) => [
@@ -52,10 +51,25 @@ const SideBar = ({
     ]);
   };
 
+  useEffect(() => {
+    if (removePlayersFromTeam.length > 0) {
+      setSelectedPlayers((prevSelectedPlayers) =>
+        prevSelectedPlayers.filter(
+          (player) => !removePlayersFromTeam.includes(player)
+        )
+      );
+    }
+  }, [removePlayersFromTeam]);
+
   const filteredPlayers = allPlayers.filter(
     (player) => !selectedPlayers.includes(player.player_name)
   );
 
+  const handleImageError = (
+    e: React.SyntheticEvent<HTMLImageElement, Event>
+  ) => {
+    e.currentTarget.src = noAvatar.src;
+  };
   return (
     <div id="side-bar" className="w-[20%]">
       <div
@@ -70,8 +84,9 @@ const SideBar = ({
               onClick={() => addPlayerHandler(player.player_name)}
             >
               <div className="flex justify-center items-center w-[100%]">
-                <Image
-                  src={player.player_image ? player.player_image : noAvatar}
+                <img
+                  src={player.player_image || noAvatar.src}
+                  onError={handleImageError}
                   width={50}
                   height={50}
                   alt={""}

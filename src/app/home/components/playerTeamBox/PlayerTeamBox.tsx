@@ -11,6 +11,7 @@ type PlayerTeamBoxProps = {
   setTeamTitle: (title: string) => void;
   isTeamReady: boolean;
   setIsTeamReady: (ready: boolean) => void;
+  setRemovePlayersFromTeam: (players: string[]) => void;
 };
 
 const PlayerTeamBox = ({
@@ -22,6 +23,7 @@ const PlayerTeamBox = ({
   setTeamTitle,
   isTeamReady,
   setIsTeamReady,
+  setRemovePlayersFromTeam,
 }: PlayerTeamBoxProps) => {
   const [isTeamLengthReady, setIsTeamLengthReady] = useState<boolean>(false);
   const [prevTitle, setPrevTitle] = useState<string>(title);
@@ -34,6 +36,13 @@ const PlayerTeamBox = ({
       setIsTeamLengthReady(false);
     }
   }, [team.length]);
+
+  const handleDeleteTeam = () => {
+    setRemovePlayersFromTeam(team);
+    setTeams([]);
+    setTeamTitle(prevTitle);
+    setIsTeamReady(false);
+  };
 
   return (
     <div
@@ -86,9 +95,7 @@ const PlayerTeamBox = ({
           ) : isTeamLengthReady && isTeamReady ? (
             <Buttons
               label="Eliminar equipo"
-              onClick={() => {
-                setTeams([]), setTeamTitle(prevTitle);
-              }}
+              onClick={handleDeleteTeam}
               variant={"tertiary"}
             />
           ) : null}
@@ -105,7 +112,9 @@ const PlayerTeamBox = ({
             <div
               key={player}
               className={`${
-                isTeamLengthReady ? "" : "border-b-2 border-black"
+                isTeamLengthReady
+                  ? "text-2xl font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]"
+                  : "border-b-2 border-black"
               } flex items-center justify-between w-full p-3 `}
             >
               <span>{player}</span>
