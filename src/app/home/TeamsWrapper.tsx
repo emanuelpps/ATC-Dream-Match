@@ -8,6 +8,7 @@ type PlayerWrapperProps = {
   setRemovePlayersFromTeam: (players: string[]) => void;
 };
 
+
 const TeamsWrapper = ({
   playerSelected,
   setPlayerSelected,
@@ -25,10 +26,10 @@ const TeamsWrapper = ({
   return (
     <div
       id="teams-wrapper"
-      className="w-[100%] flex flex-col items-center justify-center h-screen bg-center bg-cover bg-home-background"
+      className="w-[100%] min-h-[100%] flex flex-col items-center justify-center md:h-screen bg-center bg-cover bg-mobile-background md:bg-home-background"
     >
       <PlayerSelect playerSelected={playerSelected} />
-      <div className="flex items-center justify-center w-full h-screen max-h-screen border-black">
+      <div className="flex flex-col items-center justify-center w-full border-black md:h-screen md:max-h-screen md:flex-row">
         <PlayerTeamBox
           title={localTeamTitle}
           team={localTeam}

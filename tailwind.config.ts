@@ -11,6 +11,7 @@ const config: Config = {
       backgroundImage: {
         "intro-background": "url('/assets/images/background-grass.jpg')",
         "home-background": "url('/assets/images/grass-green-stadium.jpg')",
+        "mobile-background": "url('/assets/images/mobile-background.jpg')",
       },
     },
   },

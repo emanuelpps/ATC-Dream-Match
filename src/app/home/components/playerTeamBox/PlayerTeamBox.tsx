@@ -62,7 +62,7 @@ const PlayerTeamBox = ({
               ? "Felicidades tu equipo esta listo!"
               : "Nombre del equipo:"}
           </span>
-          <span className="text-5xl font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
+          <span className="md:text-5xl font-bold text-white [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]">
             {title}
           </span>
           <div>
@@ -108,13 +108,13 @@ const PlayerTeamBox = ({
             isTeamLengthReady
               ? "bg-transparent text-white font-semibold border-none"
               : "bg-[#b7c4ad] "
-          }  border-2 border-black w-[300px] h-[300px] max-h-[300px] rounded-lg`}
+          }  border-2 border-black w-[300px] max-h-[200px] h-[200px] md:w-[300px] md:h-[300px] md:max-h-[300px] rounded-lg overflow-y-auto`}
         >
-          <div className="flex justify-start w-full ">
+          <div className="flex justify-start w-full">
             <span
               className={`${
                 isTeamLengthReady ? "text-white" : "text-black"
-              } text-2xl font-bold  [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]`}
+              } md:text-2xl font-bold  [text-shadow:_7px_5px_7px_rgba(0,0,0,0.56)]`}
             >
               Jugadores:
             </span>
@@ -128,13 +128,16 @@ const PlayerTeamBox = ({
                   : "border-b-2 border-black"
               } flex items-center justify-between w-full p-3 `}
             >
-              <span>{player}</span>
+              <span className="text-sm md:text-xl">{player}</span>
               {isTeamLengthReady ? (
                 <div></div>
               ) : (
                 <AiFillCloseSquare
                   className="text-red-800 cursor-pointer"
-                  onClick={() => setTeams(team.filter((t) => t !== player))}
+                  onClick={() => {
+                    setTeams(team.filter((t) => t !== player)),
+                      setRemovePlayersFromTeam([player]);
+                  }}
                 />
               )}
             </div>
