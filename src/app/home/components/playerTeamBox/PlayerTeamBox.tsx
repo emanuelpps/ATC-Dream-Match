@@ -29,7 +29,6 @@ const PlayerTeamBox = ({
   const [prevTitle, setPrevTitle] = useState<string>(title);
 
   useEffect(() => {
-    //setPrevTitle(title);
     if (team.length >= 5) {
       setIsTeamLengthReady(true);
     } else {
@@ -72,7 +71,7 @@ const PlayerTeamBox = ({
                 value={title}
                 placeholder="agregar nuevo equipo"
                 onChange={(e) => setTeamTitle(e.target.value)}
-                className="text-xl font-bold text-white rounded-md bg-[#b7c4ad] border-2 border-black w-[300px] h-[50px] max-h-[50px]"
+                className="text-xl font-bold text-black rounded-md bg-[#b7c4ad] border-2 border-black w-[300px] h-[50px] max-h-[50px]"
               />
             ) : null}
           </div>
