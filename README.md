@@ -1,45 +1,101 @@
+
 # ATC Dream Match
 
-## Intro
+## Descripción General
+ATC Dream Match es una aplicación web diseñada para gestionar y organizar partidos de equipos. Ofrece funcionalidades para la selección de jugadores, gestión de equipos. Este proyecto está construido utilizando Next.js, TypeScript y Tailwind CSS.
 
-¿Alguna vez soñaste con ver un partido de fútbol en donde se enfrenten tus jugadores favoritos? Imaginate poder armar dos equipos de 5 jugadores cada uno, en donde no tengas ninguna limitación... posición, presupuesto, contrato, club, edad... tu mente es tu límite.
+## Estructura del Proyecto
+El proyecto está organizado de la siguiente manera:
 
-## React.js Challenge
+- **`public/`**: Contiene activos estáticos como imágenes y otros archivos accesibles públicamente.
+  - `next.svg`
+  - `vercel.svg`
+  - **`assets/`**
+- **`src/`**: El directorio principal del código fuente.
+  - **`app/`**
+    - `favicon.ico`
+    - `globals.css`
+    - `layout.tsx`
+    - `page.tsx`
+    - **`Intro/`**
+      - `Intro.tsx`
+    - **`home/`**
+      - `TeamsWrapper.tsx`
+      - `page.tsx`
+      - **`components/playerSelect/`**
+        - `PlayerSelect.tsx`
+      - **`components/playerTeamBox/`**
+        - `PlayerTeamBox.tsx`
+      - **`components/sidebar/`**
+        - `SideBar.tsx`
+  - **`components/`**
+    - **`Buttons/`**
+      - `Buttons.tsx`
+    - **`MobileWidget/`**
+      - `MobileWidget.tsx`
+  - **`services/`**
+    - `GetPlayers.js`
+- **Archivos de configuración y metadatos**:
+  - `.env`
+  - `.eslintrc.json`
+  - `.gitignore`
+  - `next.config.mjs`
+  - `package-lock.json`
+  - `package.json`
+  - `postcss.config.mjs`
+  - `tailwind.config.ts`
+  - `tsconfig.json`
 
-En **Alquila tu Cancha** deseamos crear una web app `[responsive desktop y mobile]` que se pueda crear **"El partido de tus sueños"**, un partido de fútbol 5 en donde se enfrenten tus 10 jugadores favoritos. ¿Cuáles son las funcionalidades esperadas? Allí vamos...
+## Componentes y Funciones Clave
+### Componentes
+- **PlayerSelect**: Maneja la visualización y gestión de jugadores seleccionados.
+- **TeamsWrapper**: Gestiona la creación, eliminación y modificación de equipos.
+- **SideBar**: Barra lateral para la selección de jugadores y equipos.
+- **PlayerTeamBox**: Caja para mostrar los jugadores de un equipo específico.
+- **MobileWidget**: Widget optimizado para dispositivos móviles.
+- **Buttons**: Componente de botón reutilizable con variantes de estilo.
 
-### Funcionalidades
+### Funciones
+- **`setRemovePlayersFromTeam(players: string)`**: Elimina un jugador de un equipo.
+- **`addPlayerToTeam(player: string)`**: Añade un jugador a un equipo.
+- **`scheduleMatch(date: string, teams: Team[])`**: Programa un partido entre los equipos especificados en la fecha dada.
 
-- Darle la bienvenida al usuario
-- Poder listar los equipos creados
-- Crear dos equipos
-- Darle un nombre a cada equipo y poder editarlo si es necesario
-- Poder eliminar un equipo creado
-- Impedir la creación de más de dos equipos
-- Ver el detalle de un equipo (listado de jugadores vinculado)
-- Poder vincular jugadores a un equipo
-- Poder comunicar gráficamente cuando ambos equipos están "formados y completos"
+## Ejecutar el Proyecto Localmente
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-### Precondiciones
+1. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/mauroociappinaph/atc-dream-match.git
+   cd atc-dream-match
+   ```
 
-- Se entiende como equipo formado a un equipo creado y nombrado.
-- Se entiende como equipo completo al equipo que tiene 5 jugadores.
-- El listado de jugadores disponible debe cargarse de la API https://apifootball.com/documentation/
-- No puede crearse más de 2 equipos.
-- No puede haber más de 5 jugadores en cada equipo.
-- No puede repetirse un mismo jugador en el equipo ni en el equipo adversario.
+2. **Instala las dependencias**:
+   ```bash
+   npm install
+   # o
+   yarn install
+   # o
+   pnpm install
+   # o
+   bun install
+   ```
 
-### Stack
+3. **Ejecuta el servidor de desarrollo**:
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   # o
+   pnpm dev
+   # o
+   bun dev
+   ```
 
-- Next.js con typescript (Obligatorio)
-- Docker (Preferentemente)
-- Tailwind CSS (Obligatorio)
-- Git (Obligatorio)
-- y todas las otras cosas que creas conveniente!
+4. **Abre la aplicación**:
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-## Criterios de corrección
+## Contribuciones
+¡Las contribuciones son bienvenidas! Por favor, haz un fork del repositorio y crea una pull request con tus cambios.
 
-¡Ahora sí manos a la obra! esperamos que realices la entrega en una semana desde el momento del envío de la consigna. Para realizar la entrega deseamos que nos envíes un link del repo del proyecto.
-Valoraremos que todas las funcionalidades estén implementadas, que te tomes el tiempo para testear lo realizado antes de enviarnos el resultado, que seas prolij@ al escribir el código fuente, que escribas un Readme.md donde se indique cómo levantar el proyecto y todas las otras especificaciones que creas conveniente. Pero pero pero... por sobre todas las cosas, valoraremos que aportes tu creatividad ;
-
-Muchos éxitos!
+## Licencia
+Este proyecto está licenciado bajo la Licencia MIT.
