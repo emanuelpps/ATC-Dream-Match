@@ -2,7 +2,7 @@
 
 ## Descripción General
 
-ATC Dream Match es una aplicación web diseñada para gestionar y organizar partidos de equipos. Ofrece funcionalidades para la selección de jugadores, gestión de equipos. Este proyecto está construido utilizando Next.js, TypeScript y Tailwind CSS.
+ATC Dream Match es una aplicación web diseñada para gestionar y organizar partidos de equipos. Este proyecto está construido utilizando Next.js, TypeScript y Tailwind CSS.
 
 ## Estructura del Proyecto
 
@@ -46,16 +46,16 @@ El proyecto está organizado de la siguiente manera:
 ### Funciones
 
 - **`fetchPlayers()`**: Carga la lista de jugadores cada vez que se renderiza la home.
-- **`addPlayerHandler(playerName: string)`**: Añade un jugador a la lista de jugadores seleccionados y lo marca como seleccionado.
-- **`handleImageError(e: React.SyntheticEvent<HTMLImageElement, Event>)`**: Maneja el error de imagen en caso de que una imagen no se pueda cargar.
-- **`setTeams(teams: string[])`**: Establece la lista de jugadores en el equipo.
-- **`setTeamTitle(title: string)`**: Establece el nombre del equipo.
-- **`setAddPlayersToTeam(players: string)`**: Agrega un jugador a un equipo.
-- **`setIsTeamReady(ready: boolean)`**: Establece si el equipo está listo.
-- **`setRemovePlayersFromTeam(players: string)`**: Elimina un jugador de un equipo y lo restablece a la lista de jugadores.
-- **`addPlayerToTeam(player: string)`**: Añade un jugador a un equipo.
--**`handleDeleteTeam(team: string)`**: Elimina un equipo y restablece valores por default.
--**`setIsSideBarShow(ready: boolean)`**: Despliega o oculta la barra lateral en version mobile.
+- **`addPlayerHandler()`**: Añade un jugador a la lista de jugadores seleccionados y lo marca como seleccionado.
+- **`handleImageError()`**: Maneja el error de imagen en caso de que una imagen no se pueda cargar.
+- **`setTeams()`**: Establece la lista de jugadores en el equipo.
+- **`setTeamTitle()`**: Establece el nombre del equipo.
+- **`setAddPlayersToTeam()`**: Agrega un jugador a un equipo.
+- **`setIsTeamReady()`**: Establece si el equipo está listo.
+- **`setRemovePlayersFromTeam()`**: Elimina un jugador de un equipo y lo restablece a la lista de jugadores.
+- **`addPlayerToTeam()`**: Añade un jugador a un equipo.
+-**`handleDeleteTeam()`**: Elimina un equipo y restablece valores por default.
+-**`setIsSideBarShow()`**: Despliega o oculta la barra lateral en version mobile.
 
 ## Ejecutar el Proyecto Localmente
 
@@ -72,25 +72,34 @@ Seguir estos pasos para ejecutar el proyecto localmente:
 
    ```bash
    npm install
-   # o
-   yarn install
-   # o
-   pnpm install
-   # o
-   bun install
    ```
 
 3. **Ejecuta el servidor de desarrollo**:
 
    ```bash
    npm run dev
-   # o
-   yarn dev
-   # o
-   pnpm dev
-   # o
-   bun dev
    ```
 
 4. **Abre la aplicación**:
    Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+
+## Capturas de Pantalla
+
+### Intro
+![Intro](https://res.cloudinary.com/dkgoszhfr/image/upload/v1722865077/lqvxb8qznrx9wg8c4gh9.png)
+
+### Home
+![Home](https://res.cloudinary.com/dkgoszhfr/image/upload/v1722865079/xjppjuoij5wfzsd4gp6o.png)
+
+### Selección de Jugador
+![Selección de Jugador](https://res.cloudinary.com/dkgoszhfr/image/upload/v1722865078/psil6b16c2n9m6rk58ci.png)
+
+### Agregando Jugadores a los Equipos
+![Agregando Jugadores a los Equipos](https://res.cloudinary.com/dkgoszhfr/image/upload/v1722865080/fapuyuo3otsxtslw5a6n.png)
+
+### Nombrar Equipo
+![Nombrar Equipo](https://res.cloudinary.com/dkgoszhfr/image/upload/v1722865079/ztxio4oryv3fypf6sqoc.png)
+
+### Equipos Listos
+![Equipos Listos](https://res.cloudinary.com/dkgoszhfr/image/upload/v1722865080/n7vxbfmcqhnqecvd9uru.png)
