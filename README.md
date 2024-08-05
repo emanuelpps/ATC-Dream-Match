@@ -12,36 +12,37 @@ El proyecto está organizado de la siguiente manera:
 - **`src/`**: El directorio principal del código fuente.
   - **`app/`**
 
-    - **`Intro/`**
+    - **`Intro/`**: Pantalla de bienvenida.
 
-    - **`home/`**
+    - **`home/`**: Home de la aplicación.
 
-      - **`components/playerSelect/`**
+      - **`components/playerSelect/`**: Maneja la visualización y gestión de jugadores seleccionados.
 
-      - **`components/playerTeamBox/`**
+      - **`components/playerTeamBox/`**: Caja para mostrar los Jugadores de un equipo específico.
 
-      - **`components/sidebar/`**
+      - **`components/sidebar/`**: Barra lateral para la selección de jugadores y equipos.
 
-  - **`components/`**
-    - **`Buttons/`**
+  - **`components/`**: Componentes reutilizables.
+    - **`Buttons/`**: Componente de botónes reutilizable con variantes de estilo.
 
-    - **`MobileWidget/`**
+    - **`MobileWidget/`**: Widget optimizado para dispositivos móviles.
 
-  - **`services/`**
+  - **`services/`**: Conexion a la API.
 
 
 
 ## Componentes y Funciones Clave
 ### Componentes
+- **Intro**: Pantalla de bienvenida.
 - **PlayerSelect**: Maneja la visualización y gestión de jugadores seleccionados.
 - **TeamsWrapper**: Gestiona la creación, eliminación y modificación de equipos.
 - **SideBar**: Barra lateral para la selección de jugadores y equipos.
 - **PlayerTeamBox**: Caja para mostrar los jugadores de un equipo específico.
 - **MobileWidget**: Widget optimizado para dispositivos móviles.
-- **Buttons**: Componente de botón reutilizable con variantes de estilo.
+- **Buttons**: Componente de botónes reutilizable con variantes de estilo.
 
 ### Funciones
-- **`setRemovePlayersFromTeam(players: string)`**: Elimina un jugador de un equipo.
+- **`setRemovePlayersFromTeam(players: string)`**: Elimina un jugador de un equipo y lo restablece a la lista de jugadores.
 - **`addPlayerToTeam(player: string)`**: Añade un jugador a un equipo.
 - **`scheduleMatch(date: string, teams: Team[])`**: Programa un partido entre los equipos especificados en la fecha dada.
 
