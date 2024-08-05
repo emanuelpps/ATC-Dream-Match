@@ -29,7 +29,7 @@ El proyecto está organizado de la siguiente manera:
 
       - **`components/playerTeamBox/`**: Caja para mostrar los Jugadores de un equipo específico.
 
-      - **`components/sidebar/`**: Barra lateral para la selección de jugadores y equipos.
+      - **`components/sidebar/`**: Barra lateral para la selección de jugadores.
 
   - **`components/`**: Componentes reutilizables.
 
@@ -46,7 +46,7 @@ El proyecto está organizado de la siguiente manera:
 - **Intro**: Pantalla de bienvenida.
 - **PlayerSelect**: Maneja la visualización y gestión de jugadores seleccionados.
 - **TeamsWrapper**: Gestiona la creación, eliminación y modificación de equipos.
-- **SideBar**: Barra lateral para la selección de jugadores y equipos.
+- **SideBar**: Barra lateral para la selección de jugadores.
 - **PlayerTeamBox**: Caja para mostrar los jugadores de un equipo específico.
 - **MobileWidget**: Widget optimizado para dispositivos móviles.
 - **Buttons**: Componente de botónes reutilizable con variantes de estilo.
@@ -58,10 +58,9 @@ El proyecto está organizado de la siguiente manera:
 - **`handleImageError()`**: Maneja el error de imagen en caso de que una imagen no se pueda cargar.
 - **`setTeams()`**: Establece la lista de jugadores en el equipo.
 - **`setTeamTitle()`**: Establece el nombre del equipo.
-- **`setAddPlayersToTeam()`**: Agrega un jugador a un equipo.
+- **`addPlayerHandler()`**: Agrega un jugador a un equipo.
 - **`setIsTeamReady()`**: Establece si el equipo está listo.
 - **`setRemovePlayersFromTeam()`**: Elimina un jugador de un equipo y lo restablece a la lista de jugadores.
-- **`addPlayerToTeam()`**: Añade un jugador a un equipo.
 - **`handleDeleteTeam()`**: Elimina un equipo y restablece valores por default.
 - **`setIsSideBarShow()`**: Despliega o oculta la barra lateral en version mobile.
 
