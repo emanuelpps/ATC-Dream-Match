@@ -53,10 +53,9 @@ El proyecto está organizado de la siguiente manera:
 - **`setAddPlayersToTeam()`**: Agrega un jugador a un equipo.
 - **`setIsTeamReady()`**: Establece si el equipo está listo.
 - **`setRemovePlayersFromTeam()`**: Elimina un jugador de un equipo y lo restablece a la lista de jugadores.
-
 - **`addPlayerToTeam()`**: Añade un jugador a un equipo.
--**`handleDeleteTeam()`**: Elimina un equipo y restablece valores por default.
--**`setIsSideBarShow()`**: Despliega o oculta la barra lateral en version mobile.
+- **`handleDeleteTeam()`**: Elimina un equipo y restablece valores por default.
+- **`setIsSideBarShow()`**: Despliega o oculta la barra lateral en version mobile.
 
 ## Ejecutar el Proyecto Localmente
 
