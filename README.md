@@ -4,6 +4,20 @@
 
 ATC Dream Match es una aplicación web diseñada para gestionar y organizar partidos de equipos. Este proyecto está construido utilizando Next.js, TypeScript y Tailwind CSS.
 
+## Tecnologías Utilizadas
+
+### TypeScript
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+
+### Next.js
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)
+
+### React
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white)
+
+### Axios
+![Axios](https://img.shields.io/badge/Axios-5A29E3?style=flat&logo=axios&logoColor=white)
+
 ## Estructura del Proyecto
 
 El proyecto está organizado de la siguiente manera:
