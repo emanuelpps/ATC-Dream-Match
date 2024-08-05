@@ -47,7 +47,7 @@ El proyecto está organizado de la siguiente manera:
 - **`scheduleMatch(date: string, teams: Team[])`**: Programa un partido entre los equipos especificados en la fecha dada.
 
 ## Ejecutar el Proyecto Localmente
-Para ejecutar el proyecto localmente, sigue estos pasos:
+Seguir estos pasos para ejecutar el proyecto localmente:
 
 1. **Clona el repositorio**:
    ```bash
@@ -78,10 +78,5 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
    ```
 
 4. **Abre la aplicación**:
-   Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
+   Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## Contribuciones
-¡Las contribuciones son bienvenidas! Por favor, haz un fork del repositorio y crea una pull request con tus cambios.
-
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT.
