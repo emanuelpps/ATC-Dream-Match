@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import PlayerTeamBox from "./components/playerTeamBox/PlayerTeamBox";
 import PlayerSelect from "./components/playerSelect/PlayerSelect";
 
-type PlayerWrapperProps = {
+type Props = {
   playerSelected: string;
   setPlayerSelected: (player_name: string) => void;
   setRemovePlayersFromTeam: (players: string[]) => void;
 };
 
-const TeamsWrapper = ({
+const TeamsWrapper: React.FC<Props> = ({
   playerSelected,
   setPlayerSelected,
   setRemovePlayersFromTeam,
-}: PlayerWrapperProps) => {
+}) => {
   const [localTeam, setLocalTeam] = useState<string[]>([]);
   const [visitorTeam, setVisitorTeam] = useState<string[]>([]);
   const [localTeamTitle, setLocalTeamTitle] = useState<string>("Local");

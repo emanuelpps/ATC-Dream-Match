@@ -1,17 +1,17 @@
 import React from "react";
 import { AiFillCloseSquare } from "react-icons/ai";
 
-type PlayerProps = {
+type Props = {
   playerSelected: string;
   setRemovePlayersFromTeam: (players: string[]) => void;
   setPlayerSelected: (player_name: string) => void;
 };
 
-const PlayerSelect = ({
+const PlayerSelect: React.FC<Props> = ({
   playerSelected,
   setRemovePlayersFromTeam,
   setPlayerSelected,
-}: PlayerProps) => {
+}) => {
   return (
     <div
       id="player-select"
@@ -23,7 +23,9 @@ const PlayerSelect = ({
           className="flex w-[300px] min-w-[300px] flex-col items-center justify-center p-2 bg-[#B7C4AD] border-2 border-black rounded-lg"
         >
           <div
-            onClick={() => {setRemovePlayersFromTeam([playerSelected]), setPlayerSelected("")}}
+            onClick={() => {
+              setRemovePlayersFromTeam([playerSelected]), setPlayerSelected("");
+            }}
             className="flex justify-end items-end w-full"
           >
             <AiFillCloseSquare className="" />

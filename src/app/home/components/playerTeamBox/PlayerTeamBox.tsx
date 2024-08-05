@@ -2,7 +2,7 @@ import Buttons from "@/components/Buttons/Buttons";
 import React, { useEffect, useState } from "react";
 import { AiFillCloseSquare } from "react-icons/ai";
 
-type PlayerTeamBoxProps = {
+type Props = {
   title: string;
   team: string[];
   setTeams: (team: string[]) => void;
@@ -14,7 +14,7 @@ type PlayerTeamBoxProps = {
   setRemovePlayersFromTeam: (players: string[]) => void;
 };
 
-const PlayerTeamBox = ({
+const PlayerTeamBox: React.FC<Props> = ({
   title,
   team,
   setTeams,
@@ -24,7 +24,7 @@ const PlayerTeamBox = ({
   isTeamReady,
   setIsTeamReady,
   setRemovePlayersFromTeam,
-}: PlayerTeamBoxProps) => {
+}) => {
   const [isTeamLengthReady, setIsTeamLengthReady] = useState<boolean>(false);
   const [prevTitle, setPrevTitle] = useState<string>(title);
 

@@ -18,7 +18,6 @@ const Home: React.FC = () => {
     >
       <div id="home-page-wrapper" className="flex">
         <SideBar
-          playerSelected={playerSelected}
           setPlayerSelected={setPlayerSelected}
           removePlayersFromTeam={removePlayersFromTeam}
           setIsSideBarShow={setIsSideBarShow}
